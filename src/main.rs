@@ -53,7 +53,13 @@ fn benchmark(size: u16) {
         }
     }
     let elapsed = start.elapsed();
-    println!("Size {}x{} - Elapsed: {:?}", size, size, elapsed / N as u32);
+    println!(
+        "Size {}x{} - Elapsed: {:?} - ΔT: {:?}",
+        size,
+        size,
+        elapsed / N as u32,
+        elapsed / (N * N * N) as u32
+    );
 }
 
 fn main() {
